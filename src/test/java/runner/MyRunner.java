@@ -11,7 +11,7 @@ import io.cucumber.junit.CucumberOptions;
 		
 		features = "src/test/resources/Feature",
 		glue = {"stepDefenition", "hook"},
-		tags = "@Login1",
+		tags = "@Dropdown",
 		dryRun = false,
 		monochrome = true,
 		plugin = {"pretty","html:target/Reports/htmlReport.HTML"}

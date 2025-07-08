@@ -27,6 +27,7 @@ public class LoginCases {
 		driver = DriverFactory.getDriver();
 
 	}
+	
 
 	@Then("^User enters the username (.+)$")
 	public void user_enters_the_username_username(String UserName) {
@@ -108,6 +109,8 @@ public class LoginCases {
 	public void user_enters_the_correct_username_student(String UserName) {
 		LoginTest test = new LoginTest(driver);
 		test.EnterUserName(UserName);
+		
 	}
+	
 
 }
