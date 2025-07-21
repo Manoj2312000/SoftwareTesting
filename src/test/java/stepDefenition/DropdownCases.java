@@ -113,4 +113,12 @@ public class DropdownCases {
 		Assert.assertTrue("DropDown is not enabled",dropdownpg.isDropdownEnabled());
 	}
 	
+	@Then("the dropdown shoud have the font size {string}")
+	public void the_dropdown_shoud_have_the_font_size(String expectedFontSize) {
+		DropdownPage dropdownpg = new DropdownPage(driver);
+		String actualFontSize = dropdownpg.checkFontSize();
+		System.out.println("Run time Font-Size" + actualFontSize);
+		System.out.println("Expected font-size" + expectedFontSize);
+		Assert.assertEquals("Font-Size mis match!!", expectedFontSize, actualFontSize);
+	}
 }

@@ -18,14 +18,18 @@ public class MyHooks {
 	public void setup() {
 		
 		Properties prop = ConfigReader.initializationProperties();
-		DriverFactory.initializeBrowser(prop.getProperty("browser"));
+		String browser = System.getProperty("browser", prop.getProperty("browser"));
+		DriverFactory.initializeBrowser(browser);
+		//DriverFactory.initializeBrowser(prop.getProperty("browser"));
 		driver = DriverFactory.getDriver();
 		driver.manage().deleteAllCookies();
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(1000));
-		driver.get(prop.getProperty("url"));
-		
+	    //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+		//driver.get(prop.getProperty("url")); 
+		String url = prop.getProperty("url");
+		driver.get(url);
 	}
+
 	
 	@After
 	public void teardown() {
@@ -33,3 +37,7 @@ public class MyHooks {
 	}
 
 }
+
+
+
+

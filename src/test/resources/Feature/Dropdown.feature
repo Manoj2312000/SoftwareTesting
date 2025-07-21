@@ -10,7 +10,7 @@ Feature: Automate dropdown
   Scenario: List all the options in dropdown
     Then User lists the drop
 
-  Scenario: Checks for m ultiselect in dropdown
+  Scenario: Checks for multiselect in dropdown
     Then the dropdown should not allow multiselect
 
   Scenario: Verify the selected and available select
@@ -33,5 +33,8 @@ Feature: Automate dropdown
     
    Scenario: Verify the dropdown is disabled in restricted page
    Then the dropdown should be enabled
+   
+   Scenario: Check the font size of the dropdown text
+   Then the dropdown shoud have the font size "14px" 
    
     
