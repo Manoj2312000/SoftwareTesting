@@ -64,6 +64,7 @@ public class DropdownPage {
     public String getSelectedPercentage() {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(2));
 		wait.until(ExpectedConditions.elementToBeClickable(PercentageDropdown));
+		
     	Select dropdown = new Select(PercentageDropdown);
 		return dropdown.getFirstSelectedOption().getText();
     	
