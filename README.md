@@ -176,5 +176,6 @@ If you're learning or enhancing the framework:
 ## 📞 Contact
 
 Created by: **Manoj S**  
+svmanoj2312000@gmail.com
 Tech Stack: Java, Selenium, Cucumber, JUnit 5, Docker, Jenkins  
 Feel free to reach out for suggestions or improvements!
